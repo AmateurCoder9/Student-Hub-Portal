@@ -1,0 +1,20 @@
+Student-Hub-Portal Sitemap
+
+
+STUDENT (role: student)
+
+1. Home                     /Practical-1/home.html
+
+2. Register                 /Practical-1/register.html
+
+3. Login                    /Practical-1/login.html
+
+4. Dashboard                /Practical-1/dashboard.html
+
+   |-- Attendance           attendance.html
+
+   |-- Results              result.html
+
+9. Events                   /Practical-1/events.html
+
+10. Profile                 /Practical-1/profile.html
