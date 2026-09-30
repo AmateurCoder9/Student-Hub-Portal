@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Register</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Register</h1>
+  </header>
+
+  <nav>
+    <a href="home.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="register.html">Register</a>
+    <a href="login.html">Login</a>
+    <a href="dashboard.html">Dashboard</a>
+    <a href="events.html">Events</a>
+    <a href="profile.html">Profile</a>
+    <a href="contact.html">Contact</a>
+    <a href="admin.html">Admin</a>
+    <a href="faq.html">FAQ</a>
+    <a href="feedback.html">Feedback</a>
+  </nav>
+
+  <main>
+    <p>Create an account to use StudentHub.</p>
+    <form id="registerForm">
+      <label for="name">Name</label><br>
+      <input id="name" type="text" required><br><br>
+      <label for="email">Email</label><br>
+      <input id="email" type="email" required><br><br>
+      <label for="password">Password</label><br>
+      <input id="password" type="password" minlength="6" required><br><br>
+      <label for="confirmPassword">Confirm Password</label><br>
+      <input id="confirmPassword" type="password" minlength="6" required><br><br>
+      <button type="submit">Register</button>
+    </form>
+    <p id="message"></p>
+  </main>
+  <script src="register.js"></script>
+
+
+</body>
+</html>
