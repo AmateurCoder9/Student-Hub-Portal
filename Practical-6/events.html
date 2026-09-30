@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Events</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Events</h1>
+  </header>
+
+  <nav>
+    <a href="home.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="register.html">Register</a>
+    <a href="login.html">Login</a>
+    <a href="dashboard.html">Dashboard</a>
+    <a href="events.html">Events</a>
+    <a href="profile.html">Profile</a>
+    <a href="contact.html">Contact</a>
+    <a href="admin.html">Admin</a>
+    <a href="faq.html">FAQ</a>
+    <a href="feedback.html">Feedback</a>
+  </nav>
+
+  <main>
+    <section class="data-browser" aria-labelledby="explorerTitle">
+      <h2 id="explorerTitle">Campus explorer</h2>
+      <p>Browse campus events, student profiles, and frequently asked questions.</p>
+
+      <div class="data-tabs" role="tablist" aria-label="Campus information">
+        <button id="eventsTab" class="data-tab is-active" type="button" role="tab" aria-selected="true" aria-controls="records" data-type="events">Events</button>
+        <button id="studentsTab" class="data-tab" type="button" role="tab" aria-selected="false" aria-controls="records" data-type="students" tabindex="-1">Students</button>
+        <button id="faqsTab" class="data-tab" type="button" role="tab" aria-selected="false" aria-controls="records" data-type="faqs" tabindex="-1">FAQs</button>
+      </div>
+
+      <div class="data-controls">
+        <div class="data-control">
+          <label for="searchInput">Search</label>
+          <input id="searchInput" type="search" autocomplete="off" placeholder="Search events">
+        </div>
+        <div class="data-control">
+          <label id="filterLabel" for="filterSelect">Filter by event type</label>
+          <select id="filterSelect" aria-label="Filter by event type">
+            <option value="">All event types</option>
+          </select>
+        </div>
+        <div class="data-control">
+          <label for="sortSelect">Sort</label>
+          <select id="sortSelect">
+            <option value="title-asc">Title or name A-Z</option>
+            <option value="title-desc">Title or name Z-A</option>
+            <option value="date-desc">Newest date first</option>
+          </select>
+        </div>
+      </div>
+
+      <p id="dataStatus" class="data-status" role="status" aria-live="polite">Loading events...</p>
+      <div id="records" class="record-grid" role="tabpanel" aria-labelledby="eventsTab" aria-busy="true"></div>
+
+      <nav class="pagination" aria-label="Result pages">
+        <button id="previousPage" type="button" disabled>Previous</button>
+        <span id="pageStatus" aria-live="polite">Page 1 of 1</span>
+        <button id="nextPage" type="button" disabled>Next</button>
+      </nav>
+    </section>
+  </main>
+
+  <script src="data.js"></script>
+</body>
+</html>

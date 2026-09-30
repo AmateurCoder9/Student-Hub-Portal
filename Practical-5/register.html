@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Register</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Register</h1>
+  </header>
+
+  <nav>
+    <a href="home.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="register.html">Register</a>
+    <a href="login.html">Login</a>
+    <a href="dashboard.html">Dashboard</a>
+    <a href="events.html">Events</a>
+    <a href="profile.html">Profile</a>
+    <a href="contact.html">Contact</a>
+    <a href="admin.html">Admin</a>
+    <a href="faq.html">FAQ</a>
+    <a href="feedback.html">Feedback</a>
+  </nav>
+
+  <main>
+    <p>Create an account to use StudentHub.</p>
+    <form id="registerForm" novalidate>
+      <div class="form-field">
+        <label for="name">Full name</label>
+        <input id="name" name="name" type="text" autocomplete="name" aria-describedby="nameError" required>
+        <span class="field-error" id="nameError" aria-live="polite"></span>
+      </div>
+
+      <div class="form-field">
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" autocomplete="email" aria-describedby="emailError" required>
+        <span class="field-error" id="emailError" aria-live="polite"></span>
+      </div>
+
+      <div class="form-field">
+        <label for="mobile">Mobile number</label>
+        <input id="mobile" name="mobile" type="tel" inputmode="numeric" autocomplete="tel-national" aria-describedby="mobileError" required>
+        <span class="field-error" id="mobileError" aria-live="polite"></span>
+      </div>
+
+      <div class="form-field">
+        <label for="password">Password</label>
+        <input id="password" name="password" type="password" autocomplete="new-password" aria-describedby="passwordStrengthText passwordError" required>
+        <progress id="passwordStrength" max="4" value="0" aria-label="Password strength"></progress>
+        <span id="passwordStrengthText" aria-live="polite">Password strength: not entered</span>
+        <span class="field-error" id="passwordError" aria-live="polite"></span>
+      </div>
+
+      <div class="form-field">
+        <label for="confirmPassword">Confirm password</label>
+        <input id="confirmPassword" name="confirmPassword" type="password" autocomplete="new-password" aria-describedby="confirmPasswordError" required>
+        <span class="field-error" id="confirmPasswordError" aria-live="polite"></span>
+      </div>
+
+      <div class="form-field">
+        <label for="course">Course</label>
+        <select id="course" name="course" aria-describedby="courseError" required>
+          <option value="">Select a course</option>
+          <option value="computer-engineering">Computer Engineering</option>
+          <option value="information-technology">Information Technology</option>
+          <option value="computer-science">Computer Science</option>
+          <option value="other">Other</option>
+        </select>
+        <span class="field-error" id="courseError" aria-live="polite"></span>
+      </div>
+
+      <div class="form-field">
+        <label for="year">Year</label>
+        <select id="year" name="year" aria-describedby="yearError" required>
+          <option value="">Select your year</option>
+          <option value="1">First year</option>
+          <option value="2">Second year</option>
+          <option value="3">Third year</option>
+          <option value="4">Fourth year</option>
+        </select>
+        <span class="field-error" id="yearError" aria-live="polite"></span>
+      </div>
+
+      <fieldset class="form-field" id="genderGroup" aria-describedby="genderError">
+        <legend>Gender</legend>
+        <label><input name="gender" type="radio" value="female" required> Female</label>
+        <label><input name="gender" type="radio" value="male"> Male</label>
+        <label><input name="gender" type="radio" value="other"> Other</label>
+        <label><input name="gender" type="radio" value="prefer-not-to-say"> Prefer not to say</label>
+        <span class="field-error" id="genderError" aria-live="polite"></span>
+      </fieldset>
+
+      <div class="form-field terms-field">
+        <label for="terms">
+          <input id="terms" name="terms" type="checkbox" aria-describedby="termsError" required>
+          I accept the terms and conditions
+        </label>
+        <span class="field-error" id="termsError" aria-live="polite"></span>
+      </div>
+
+      <button type="submit">Register</button>
+    </form>
+    <p id="message" role="status" aria-live="polite"></p>
+  </main>
+  <script src="register.js"></script>
+
+
+</body>
+</html>
