@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Practical 8 - MySQL Schema & PDO Connectivity | StudentHub</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>StudentHub Database & PDO Integration</h1>
+    <p>Practical 8: Relational Schema, Prepared Statements & PDO Connectivity</p>
+  </header>
+
+  <nav>
+    <a href="home.html" class="active">Home</a>
+    <a href="test_connection.php">Test Connection</a>
+    <a href="insert_student.php">Register for Event</a>
+    <a href="students_event.php">View Registrations</a>
+  </nav>
+
+  <main>
+    <section class="card">
+      <h2>Database Modules Overview</h2>
+      <p>This practical implements database normalization, relational schema design, PDO connection handling, and prepared SQL execution.</p>
+      
+      <div class="features-grid">
+        <div class="feature-box">
+          <h3>1. Database Connection</h3>
+          <p>Secure PDO connection in <code>db.php</code> with exception-based error reporting.</p>
+          <a class="btn" href="test_connection.php">Run Connection Test &rarr;</a>
+        </div>
+
+        <div class="feature-box">
+          <h3>2. Prepared Statement Insert</h3>
+          <p>Prevent SQL injection by binding parameters for student event registration.</p>
+          <a class="btn" href="insert_student.php">Register Student &rarr;</a>
+        </div>
+
+        <div class="feature-box">
+          <h3>3. Relational INNER JOIN</h3>
+          <p>Query normalized tables across <code>students</code>, <code>events</code>, and <code>registrations</code>.</p>
+          <a class="btn" href="students_event.php">View Joined Table &rarr;</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Relational Schema Structure</h2>
+      <p>The <code>studenthub.sql</code> schema includes:</p>
+      <ul>
+        <li><strong>students:</strong> <code>id</code> (PK), <code>name</code>, <code>email</code>, <code>course</code>, <code>created_at</code></li>
+        <li><strong>events:</strong> <code>id</code> (PK), <code>title</code>, <code>event_date</code>, <code>description</code></li>
+        <li><strong>registrations:</strong> <code>id</code> (PK), <code>student_id</code> (FK), <code>event_id</code> (FK), <code>registered_at</code></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 StudentHub Portal | ITUE203 Web Development Frameworks</p>
+  </footer>
+</body>
+</html>

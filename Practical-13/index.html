@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>StudentHub - AJAX Events</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>StudentHub Portal</h1>
+    <p>AJAX & Fetch API CRUD (No Page Reload)</p>
+</header>
+
+<div class="container" style="max-width: 900px;">
+    <h2>Events Portal</h2>
+
+    
+    <div id="msgBox" class="alert" style="display: none;"></div>
+
+    
+    <div style="display: flex; gap: 15px; margin-bottom: 20px;">
+        <input type="text" id="searchInput" placeholder="Search events in real-time (debounced)..." style="flex: 2; padding: 10px;">
+        <button id="showFormBtn" style="flex: 1; background: #4f46e5; color: white;">+ Add New Event</button>
+    </div>
+
+    
+    <div id="eventFormCard" style="display: none; background: #fdfdfd; border: 1px solid #ddd; padding: 15px; border-radius: 6px; margin-bottom: 20px;">
+        <h3 style="margin-top: 0;">Add Event via Fetch API</h3>
+        <form id="addEventForm">
+            <label>Title:</label>
+            <input type="text" id="title" required>
+
+            <label>Category:</label>
+            <select id="category">
+                <option value="Workshop">Workshop</option>
+                <option value="Hackathon">Hackathon</option>
+                <option value="Seminar">Seminar</option>
+            </select>
+
+            <label>Date:</label>
+            <input type="date" id="event_date" required>
+
+            <label>Description:</label>
+            <textarea id="description" rows="3" style="width: 100%; box-sizing: border-box; border: 1px solid #ccc; padding: 6px;"></textarea>
+
+            <br><br>
+            <button type="submit" style="background: #16a34a; color: white;">Submit (AJAX POST)</button>
+            <button type="button" id="cancelFormBtn" style="background: #888; color: white; margin-left: 5px;">Cancel</button>
+        </form>
+    </div>
+
+    
+    <div id="loadingText" style="text-align: center; color: #666; margin: 20px 0;">Loading events from API...</div>
+    <div id="eventsList" class="events-grid"></div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
